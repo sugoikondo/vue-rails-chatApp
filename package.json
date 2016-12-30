@@ -1,0 +1,25 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atsumine/vue-rails-chatApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atsumine/vue-rails-chatApp/issues"
+  },
+  "homepage": "https://github.com/atsumine/vue-rails-chatApp#readme",
+  "dependencies": {
+    "vue-material": "^0.5.2"
+  }
+}
