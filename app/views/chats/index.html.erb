@@ -2,26 +2,24 @@
 
 <h1>Chats</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="chat_container">
+      <form v-on:submit.prevent="insertNewChat($event)">
+        <input type="text" id="new_chat_form" v-model="chatFormParam">
+      </form>
 
-  <tbody>
-    <% @chats.each do |chat| %>
-      <tr>
-        <td><%= chat.body %></td>
-        <td><%= link_to 'Show', chat %></td>
-        <td><%= link_to 'Edit', edit_chat_path(chat) %></td>
-        <td><%= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <table>
+        <thead>
+        <tr>
+          <th>Body</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
 
-<br>
-
-<%= link_to 'New Chat', new_chat_path %>
+        <tbody v-for="(chat, index) in chats">
+        <tr>
+          <td>{{ chat.body }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+</div>

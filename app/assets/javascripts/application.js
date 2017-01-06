@@ -3,17 +3,15 @@
 //= require vue-material/dist/vue-material
 //= require_tree .
 
+// ActionCable
+(function() {
+    this.App || (this.App = {});
+
+    App.cable = ActionCable.createConsumer();
+}).call(this);
+
 Vue.use(VueMaterial);
 
-Vue.material.registerTheme('default', {
-    primary: 'cyan',
-    accent: 'red',
-    warn: 'red',
-    background: 'white'
-});
-
-console.log(Vue.version);
-
-new Vue({
-    el: '#app'
-})
+// new Vue({
+//     el: '#app'
+// });

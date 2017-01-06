@@ -3,8 +3,8 @@
   <head>
     <title>VueRailsChatapp</title>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">-->
+    <!--<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">-->
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
@@ -13,10 +13,7 @@
     <md-toolbar>
       <h1 class="md-title">My Title</h1>
     </md-toolbar>
-    <div class="main-content">
-      <md-button class="md-primary">Primary</md-button>
-      <%= yield %>
-    </div>
+    <%= yield %>
   </div>
   <%= javascript_include_tag 'application' %>
   </body>
