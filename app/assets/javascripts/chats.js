@@ -6,24 +6,19 @@ App.chats = new Vue({
     el: '#app',
     data: {
         chats: [
-            {id: 1, body: 'hoge'},
-            {id: 2, body: 'fuga'},
-            {id: 3, body: 'kage'}
+            { body: 'hoge' },
+            { body: 'fuga' },
+            { body: 'kage' }
         ],
-        chatFormParam: '',
-        counter: 0
+        chatFormParam: ''
     },
     created: function () {
-        console.log('fugafuga')
     },
     methods: {
-        insertNewChat: function (event) {
-            console.log(event);
-            // if (this.chatFormParam === '') return;
-            // TODO: FIX THIS!!
-            this.chats.push({id: 1, body: this.chatFormParam});
+        insertNewChat: function () {
+            if (this.chatFormParam === '') return;
+            this.chats.push({ body: this.chatFormParam });
             this.chatFormParam = '';
-            console.log('hogehoge');
         }
     }
 });
