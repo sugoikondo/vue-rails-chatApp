@@ -22,5 +22,8 @@
   "homepage": "https://github.com/atsumine/vue-rails-chatApp#readme",
   "dependencies": {
     "vue-material": "^0.5.2"
+  },
+  "devDependencies": {
+    "material-design-icons": "^3.0.1"
   }
 }

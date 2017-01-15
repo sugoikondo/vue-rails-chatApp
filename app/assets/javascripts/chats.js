@@ -3,13 +3,10 @@
 Vue.use(VueMaterial);
 
 App.chats = new Vue({
-    el: '#app',
+    el: '#chat_container',
+    parent: App.root,
     data: {
-        chats: [
-            { body: 'hoge' },
-            { body: 'fuga' },
-            { body: 'kage' }
-        ],
+        chats: gon.chats,
         chatFormParam: ''
     },
     created: function () {

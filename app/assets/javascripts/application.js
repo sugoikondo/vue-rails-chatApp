@@ -5,13 +5,26 @@
 
 // ActionCable
 (function() {
+    console.log(this);
     this.App || (this.App = {});
 
-    App.cable = ActionCable.createConsumer();
+    // App.cable = ActionCable.createConsumer();
 }).call(this);
 
 Vue.use(VueMaterial);
 
-// new Vue({
-//     el: '#app'
-// });
+var topNav = new Vue({
+    el: '#topNavbar',
+    // data: [],
+    methods: {
+        // 左側ナビゲーションを開閉する
+        toggleSideNav: function() {
+            sideNav.$refs.leftSidenav.toggle();
+        }
+    }
+});
+
+var sideNav = new Vue({
+    el: '#sideNav',
+    // data: []
+});
