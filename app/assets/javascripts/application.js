@@ -11,6 +11,14 @@
     // App.cable = ActionCable.createConsumer();
 }).call(this);
 
+// Vue Materialのテーマを変更
+Vue.material.registerTheme('default', {
+    primary: {
+        color: 'teal',
+        hue: 'A700'
+    },
+})
+
 Vue.use(VueMaterial);
 
 var topNav = new Vue({
